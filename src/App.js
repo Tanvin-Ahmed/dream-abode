@@ -1,13 +1,10 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Home from './components/Home/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/Navbar/NavBar';
-import Footer from './components/Footer/Footer';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
+import NavBar from "./components/Navbar/NavBar";
+import Review from "./components/Review/Review";
 
 function App() {
   return (
@@ -17,6 +14,7 @@ function App() {
           <Route exact path="/">
             <NavBar />
             <Home />
+            <Review />
             <Footer />
           </Route>
         </Switch>
