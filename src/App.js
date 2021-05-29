@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import PrivateRoute from "./components/Login/PrivateRoute";
 import NavBar from "./components/Navbar/NavBar";
+import Payment from "./components/Payment/Payment";
 import Review from "./components/Review/Review";
 
 function App() {
@@ -21,6 +24,12 @@ function App() {
             <Review />
             <Footer />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute path="/payment/:id">
+            <Payment />
+          </PrivateRoute>
         </Switch>
       </Router>
     </main>

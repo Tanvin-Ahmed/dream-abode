@@ -23,8 +23,6 @@ const Home = () => {
         searchTerm: state.dataReducer.searchTerm
     }))
 
-    console.log(propertyData);
-
     return (
         <section className="home">
             <div className="search__bar">
@@ -53,7 +51,7 @@ const Home = () => {
 
                         <div className="bottom">
                             <div className="buttonGroup">
-                                <button className="_btn order__btn">Order Now</button>
+                                <button onClick={() => history.push(`/payment/${data.id}`)} className="_btn order__btn">Order Now</button>
                                 <button onClick={() => handleGetSpecificPropertyData(data.id)} className="_btn review__btn">Review</button>
                             </div>
                             <div className="down__arrow">
