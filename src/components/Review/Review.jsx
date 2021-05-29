@@ -16,8 +16,6 @@ const Review = () => {
     data: state.dataReducer.specificPropertyInfo
   }))
 
-  console.log(data);
-
 
   return (
     <div>
