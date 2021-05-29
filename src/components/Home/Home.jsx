@@ -43,7 +43,7 @@ const Home = () => {
                         return val;
                     }
                 }).map(data => (
-                    <div style={{ backgroundImage: `url(${data.homeImg})` }} className="home__container">
+                    <div key={data.id} style={{ backgroundImage: `url(${data.homeImg})` }} className="home__container">
                         <div className="headline text-center">
                             <h1>Home to sell</h1>
                             <h3>{data.location}</h3>

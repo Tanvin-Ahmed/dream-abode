@@ -36,8 +36,13 @@ const PaymentForm = () => {
     }, []);
 
     const handleSaveUserPlan = () => {
-        dispatch(setTotalBuy(parseInt(id, 10)));
+        const data = {
+            ...propertyData,
+            date: new Date().toLocaleString()
+        }
+        dispatch(setTotalBuy(data));
         history.push('/');
+        reset();
     }
 
     const handleSubmit = async (event) => {

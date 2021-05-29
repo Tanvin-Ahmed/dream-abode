@@ -11,6 +11,7 @@ import PrivateRoute from "./components/Login/PrivateRoute";
 import NavBar from "./components/Navbar/NavBar";
 import Payment from "./components/Payment/Payment";
 import Review from "./components/Review/Review";
+import UserAccount from "./components/UserAccount/UserAccount";
 
 function App() {
 
@@ -38,6 +39,11 @@ function App() {
           </Route>
           <PrivateRoute path="/checkout/:id">
             <Payment />
+          </PrivateRoute>
+          <PrivateRoute path="/user-account">
+            <NavBar />
+            <UserAccount />
+            <Footer />
           </PrivateRoute>
         </Switch>
       </Router>

@@ -34,7 +34,7 @@ const NavBar = () => {
                     <Nav className="me-auto" />
                     <Nav>
                         <Nav.Link onClick={() => history.push('/')}>Home</Nav.Link>
-                        <Nav.Link onClick={() => history.push('/user')}>
+                        <Nav.Link onClick={() => history.push('/user-account')}>
                             User Account
                         </Nav.Link>
                         {
