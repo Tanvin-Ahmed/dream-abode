@@ -4,13 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPropertyData, getSearchTerm } from '../../app/actions/dataAction';
+import { useHistory } from 'react-router';
 
 const Home = () => {
+    const history = useHistory();
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getPropertyData());
     }, [])
+
+    const handleGetSpecificPropertyData = (id) => {
+        history.push(`/review/${id}`);
+    }
 
     const { propertyData, searchTerm } = useSelector(state => ({
         propertyData: state.dataReducer.propertyData,
@@ -48,7 +54,7 @@ const Home = () => {
                         <div className="bottom">
                             <div className="buttonGroup">
                                 <button className="_btn order__btn">Order Now</button>
-                                <button className="_btn review__btn">Review</button>
+                                <button onClick={() => handleGetSpecificPropertyData(data.id)} className="_btn review__btn">Review</button>
                             </div>
                             <div className="down__arrow">
                                 <FontAwesomeIcon className="icon" icon={faChevronDown} />

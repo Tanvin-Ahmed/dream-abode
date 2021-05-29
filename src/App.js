@@ -14,6 +14,10 @@ function App() {
           <Route exact path="/">
             <NavBar />
             <Home />
+            <Footer />
+          </Route>
+          <Route path="/review/:id">
+            <NavBar />
             <Review />
             <Footer />
           </Route>
