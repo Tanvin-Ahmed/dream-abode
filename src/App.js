@@ -1,6 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import { getUserInfo } from "./app/actions/userActions";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -10,6 +13,12 @@ import Payment from "./components/Payment/Payment";
 import Review from "./components/Review/Review";
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserInfo());
+  }, []);
+
   return (
     <main className="App">
       <Router>

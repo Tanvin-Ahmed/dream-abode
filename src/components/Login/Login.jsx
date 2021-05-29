@@ -22,14 +22,15 @@ const Login = () => {
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
 
-    const handleResponse = (res) => {
+    const handleResponse = async (res) => {
         dispatch(getErrorMessage(''));
         const user = {
             displayName: res.displayName,
             email: res.email
         }
-        dispatch(getUserInfo(user));
+        await sessionStorage.setItem('abode/user', JSON.stringify(user));
         dispatch(loginLoading(false));
+        await dispatch(getUserInfo());
         history.replace(from);
     }
 
