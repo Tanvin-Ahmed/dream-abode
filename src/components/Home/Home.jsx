@@ -51,7 +51,7 @@ const Home = () => {
 
                         <div className="bottom">
                             <div className="buttonGroup">
-                                <button onClick={() => history.push(`/payment/${data.id}`)} className="_btn order__btn">Order Now</button>
+                                <button onClick={() => history.push(`/checkout/${data.id}`)} className="_btn order__btn">Order Now</button>
                                 <button onClick={() => handleGetSpecificPropertyData(data.id)} className="_btn review__btn">Review</button>
                             </div>
                             <div className="down__arrow">
