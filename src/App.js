@@ -9,6 +9,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import PrivateRoute from "./components/Login/PrivateRoute";
 import NavBar from "./components/Navbar/NavBar";
+import NoMatch from "./components/NoMatch/NoMatch";
 import Payment from "./components/Payment/Payment";
 import Review from "./components/Review/Review";
 import UserAccount from "./components/UserAccount/UserAccount";
@@ -45,6 +46,9 @@ function App() {
             <UserAccount />
             <Footer />
           </PrivateRoute>
+          <Route path="*">
+            <NoMatch />
+          </Route>
         </Switch>
       </Router>
     </main>

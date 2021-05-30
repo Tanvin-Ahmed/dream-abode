@@ -17,6 +17,7 @@ const NavBar = () => {
                 if (data.error) {
                     alert(data.error.message);
                 } else {
+                    sessionStorage.removeItem('abode/user');
                     console.log(data.message);
                     dispatch(getUserInfo({}));
                 }
