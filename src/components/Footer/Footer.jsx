@@ -5,10 +5,11 @@ import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/fre
 
 const Footer = () => {
     return (
-        <section className="footer">
+        <section data-testid="test-1" className="footer">
                 <div className="brand">
                     <h2>Dream Abode</h2>
                 </div>
+
                 <div className="link">
                     <a href=""><FontAwesomeIcon icon={faFacebook} /></a>
                     <a href=""><FontAwesomeIcon icon={faTwitter} /></a>
