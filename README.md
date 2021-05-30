@@ -17,7 +17,7 @@
   - User can go forward Checkout page
 - Authentication System & User Account Profile
   - User can create an account or Sign in
-  - User account profile
+  - User account profile & cart history
 
 ## ScreenShot
 
